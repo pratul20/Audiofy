@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/music_screeb_bg"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/baumans"
+        android:paddingLeft="10dp"
+        android:text="udta punjab"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/singer_name"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/singer_name"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/baumans"
+        android:paddingLeft="5dp"
+        android:text="diljit dosnajh"
+        android:textColor="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_name" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/next_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="24dp"
+
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/thumbnail_img"
+        android:layout_width="297dp"
+        android:layout_height="297dp"
+        android:layout_marginEnd="234dp"
+        android:src="@drawable/scenery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/prev_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="340dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/play_pause"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/prev_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_btn"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <com.marcinmoskala.arcseekbar.ArcSeekBar
+        android:id="@+id/seekProg"
+        android:layout_width="390dp"
+        android:layout_height="520dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="170dp"
+        android:rotation="90"
+        app:thumb="@drawable/thumb"
+        app:progressColor="@color/black"
+        app:progressBackgroundColor="@color/light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/play_pause"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473"
+        app:roundEdges="true" />
+
+    <!--    <SeekBar-->
+<!--        android:id="@+id/seekProg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="6dp"-->
+<!--        android:layout_margin="32dp"-->
+<!--        android:layout_marginBottom="192dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imageView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/prev_btn"-->
+<!--        app:layout_constraintVertical_bias="0.415"-->
+<!--        tools:layout_editor_absoluteX="32dp" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

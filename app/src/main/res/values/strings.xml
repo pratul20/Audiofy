@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Audiofy</string>
+    <string name="facebook_app_id">325297966117171</string>
+    <string name="fb_login_protocol_scheme">fb325297966117171</string>
+
+</resources>

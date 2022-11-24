@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg" />
+
+
+        <soup.neumorphism.NeumorphTextView
+            android:id="@+id/login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="300dp"
+            android:defaultFocusHighlightEnabled="true"
+            android:fontFamily="@font/audiowide"
+            android:text="LOGIN"
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:neumorph_shadowColorDark="@color/black"
+            app:neumorph_shadowElevation="2dp" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/email_container"
+            android:layout_below="@+id/login_text"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/light"
+            app:neumorph_shapeType="pressed">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/no_background"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="email"
+                android:autofillHints="emailAddress"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:cursorVisible="true"
+                />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+        android:id="@+id/password_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/email_container"
+        android:background="@color/light"
+        app:neumorph_shapeType="pressed"
+        >
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/no_background"
+            android:cursorVisible="true"
+            android:hint="password"
+            android:autofillHints="password"
+            android:paddingRight="15dp"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp" />
+    </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            android:id="@+id/forgotpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_container"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:text="Forgot Password?"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/login"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forgotpassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="LOGIN"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/newaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="create a new account"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/OR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/newaccount"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/newaccount"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/OR"
+            android:background="@color/black" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/newaccount"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/OR"
+            android:background="@color/black" />
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/google"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/OR"
+            android:layout_marginRight="18dp"
+            android:layout_toLeftOf="@id/phone"
+            android:src="@drawable/google"
+            app:neumorph_shadowElevation="3dp" />
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/phone"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/OR"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/phone"
+            app:neumorph_shadowElevation="3dp" />
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/github"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/OR"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@id/phone"
+            android:src="@drawable/github"
+            app:neumorph_shadowElevation="3dp" />
+
+    </RelativeLayout>
+</ScrollView>
